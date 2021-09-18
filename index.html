@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant</title>
+
+    <!-- FIREBASE -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2 input-field"><input id="email" type="email" class="validate">
+                <label class="active" for="email">Email</label></div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s2 input-field"><input id="password" type="password" class="validate">
+                <label class="active" for="password">Password</label></div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <p>
+                    <label>
+                  <input name="group1" type="radio" checked />
+                  <span>Restaurant</span>
+                </label>
+                </p>
+                <p>
+                    <label>
+                  <input name="group1" type="radio" />
+                  <span>Customer</span>
+                </label>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s2"><a class="waves-effect waves-light btn-large">LogIn</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger btn-large" href="#modal1">SignUp</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>CREATE ACCOUNT</h4>
+            <div class="row">
+                <div class="col s12 input-field"><input id="username" type="text" class="validate">
+                    <label class="active" for="username">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field"><input id="useremail" type="email" class="validate">
+                    <label class="active" for="useremail">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field"><input id="userphone" type="number" class="validate">
+                    <label class="active" for="userphone">Phone NO</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field"><input id="usercountry" type="text" class="validate">
+                    <label class="active" for="usercountry">Country</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field"><input id="usercity" type="text" class="validate">
+                    <label class="active" for="usercity">City</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field"><input id="userpassword" type="password" class="validate">
+                    <label class="active" for="userpassword">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+
+                    <p>
+                        <label>
+                      <input name="group2" type="radio" value="restaurant" checked />
+                      <span>Restaurant</span>
+                    </label>
+                    </p>
+                    <p>
+                        <label>
+                      <input name="group2" value="customer" type="radio" />
+                      <span>Customer</span>
+                    </label>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="signUp();">Submit</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script defer src="./script.js"></script>
+</body>
+
+</html>
